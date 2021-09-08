@@ -1,0 +1,25 @@
+{
+  "name": "frontend-test-task",
+  "version": "1.0.0",
+  "description": "Тестовое задание 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anastasiia-Yarmilko/frontend-test-task.git"
+  },
+  "keywords": [],
+  "author": "ANASTASIIA_YARMILKO <anastasiia.yarm@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anastasiia-Yarmilko/frontend-test-task/issues"
+  },
+  "homepage": "https://github.com/Anastasiia-Yarmilko/frontend-test-task#readme",
+  "devDependencies": {
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
