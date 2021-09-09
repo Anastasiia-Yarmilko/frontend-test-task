@@ -17,36 +17,33 @@ const refsSearchResults = document.querySelector('.book-search-result');
 function displayBooks(event) {
     refsSearchResults.innerHTML = '';
     const bookSearchName = event.target.value;
-    fetchBooks(bookSearchName)
-        .then(results => {
-            if (results.length <= 10) {
-                refsSearchResults.insertAdjacentHTML(
-                    'beforeend',
-                    createBooksListTemplate(results),
-                ) 
-            };
-            if (results.length > 10) {
-                alert({
-                    text: 'Too many matches found. Please enter a more specific query!',
-                    type: 'error',
-                    delay: 1000,
-                    stack: new Stack({
-                        dir1: 'up',
-                    }),
-                })
-            };
-        })
-        .catch(console.log)
+    bookSearchName.length > 3
+    ? (fetchBooks(bookSearchName)
+    .then(results => {
+        refsSearchResults.insertAdjacentHTML(
+            'beforeend',
+            createBooksListTemplate(results),
+        );
+    })
+    .catch(console.log))
+    : (alert({
+        text: 'Please, enter more symbols',
+        type: 'error',
+        delay: 1000,
+        stack: new Stack({
+            dir1: 'up',
+        }),
+    }));
 };
 
 function createBooksListTemplate(results) {
-  const template =
-  '<ul class="book-list">' +
-  results.reduce((acc, item) => {
-      acc += `<li>${item.name}</li>`;
-      return acc;
-    }, '') +
-    '</ul>';
+    const template =
+        '<ul class="book-list">' +
+        results.items.reduce((acc, item) => {
+            acc += `<li>${item.volumeInfo.title.toUpperCase()}</li>`;
+            return acc;
+        }, '') +
+        '</ul>';
     return template;
 };
 
