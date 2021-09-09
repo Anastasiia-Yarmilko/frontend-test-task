@@ -1,0 +1,49 @@
+@import '../node_modules/@pnotify/core/dist/PNotify.css';
+@import '../node_modules/@pnotify/mobile/dist/PNotifyMobile.css';
+@import '../node_modules/@pnotify/core/dist/Material.css';
+@import '../node_modules/material-design-icons/iconfont/material-icons.css';
+
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(212, 212, 212);
+  padding-top: 50px;
+}
+
+.book-search-input {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+
+  width: 600px;
+  height: 50px;
+  padding: 10px 20px;
+  border: 2px solid rgb(44, 44, 44);
+  border-radius: 3px;
+  outline: none;
+  font-size: 26px;
+}
+
+.book-search-result {
+  font-size: 26px;
+}
+
+.book-search {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.book-list {
+  list-style: none;
+  width: 600px;
+  margin: 0 auto;
+}
